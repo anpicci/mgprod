@@ -22,7 +22,7 @@ year = "2022"
 # year = "2023"
 # year = "2023BPix"
 
-version = "v1"
+version = f"v{tstamp}"
 grp_tag = "test"
 prod_tag = "Round1/Batch1"
 
@@ -52,12 +52,12 @@ input_path = "/store/user/"
 storage = StorageConfiguration(
     input = [
         "file:///cms/cephfs/data" + input_path,
-        "root://skynet013.crc.nd.edu:1094/" + input_path,
+        #"root://skynet013.crc.nd.edu:1094/" + input_path,
         # "root://skynet013.crc.nd.edu:1096/" + input_path, # For outside-of-ND file access
     ],
     output = [
         "file:///cms/cephfs/data" + output_path,
-        "root://skynet013.crc.nd.edu:1094/" + output_path,
+        #"root://skynet013.crc.nd.edu:1094/" + output_path,
     ],
     disable_input_streaming=True
 )
@@ -86,15 +86,15 @@ event_multiplier = {
 }
 
 gridpacks = [
-    # "example/path/to/gridpack/location/ttHJet_all22WCsStartPtCheckdim6TopMay20GST_run0_slc7_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
-    # "awightma/gridpack_scans/run3/tests/ttHJet_ctWReTest13p6AxisScan_run0_slc7_amd64_gcc10_CMSSW_12_4_8_tarball.tar.xz"
+    #"example/path/to/gridpack/location/ttHJet_all22WCsStartPtCheckdim6TopMay20GST_run0_slc7_amd64_gcc630_CMSSW_9_3_16_tarball.tar.xz"
+    "awightma/gridpack_scans/run3/tests/ttHJet_ctWReTest13p6AxisScan_run0_slc7_amd64_gcc10_CMSSW_12_4_8_tarball.tar.xz"
 ]
 
 category_resources = {
     "default": {
         "cores": 1,
-        "memory": 1200,
-        "disk": 2900,
+        "memory": 3000,
+        "disk": 4500,
     },
     # Example for a process (called 'example') that needs tailored resources
     # "lhe_example": {
